@@ -1,0 +1,348 @@
+/*Retira qualquer espaçamento inicial que o site possa ter o deixando em 0*/
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; /* */
+}
+
+body{
+font-family: 'itim',cursive; /* definir a fonte da tela*/
+background: color #fff; /* definir a cor do body */
+}
+
+/* "CAPA" */
+.sobre{
+    padding: 55px;
+    text-align: center;
+    font-size: 25px;
+    background-color: #f9dc5c;
+    height: 500px;
+    padding-top: 150px;
+    display: flex; /*  */
+    flex-direction: row; /* direção de linha que ele esta indo */
+    justify-content:center; 
+    align-items: center;
+    max-width: 100%; /* maximo de tamanho que ela chega */
+}
+
+.textosobre h1{
+padding-bottom:10px ; /* espaçamento em baixo */
+text-align: 200px;
+font-size: 50px;
+margin-right: 100px;
+animation-duration: 1.5s;
+animation-name: slide1;
+flex-direction: column;
+}
+
+.textosobre h3{
+    animation-duration: 1.5s;
+    animation-name: slide1;
+    flex-direction: column;
+}
+
+.imagemsobre{
+   margin: 10px;
+   display: flex; /* para que a imagem fosse flexivel dentro do seu container */
+   justify-content: center;
+   align-items: center;
+   width: 30%;
+}
+
+.imagemsobre img{
+    width:30vw;
+    }
+
+/* fazer a transição */
+@keyframes slide1 {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+/* "ONGs" */
+
+.container{
+position:relative; 
+width: 100%;
+display: flex; /* indica que é flex */
+justify-content: center; /* alinhamento horizontal*/
+align-items: center;/* alinhamento vertical*/
+padding: 30px; /* espaçamento do interior da pagina */
+flex-direction: column; /* direção que o container esta indo como coluna (um embaixo do outro) */
+}
+
+.ong{ /* parte branca das ongs */
+    display: flex; /*  */
+    flex-direction: row; /* direção de linha que ele esta indo */
+    justify-content:center; 
+    align-items: center;
+    max-width: 100%; /* maximo de tamanho que ela chega */
+    border: solid 3px black;
+    background-color: #fff4c1;
+    border-radius: 20px;
+}
+/* ALINHAMENTO DOS PARAGRAFOS SOBRE AS ONGs */
+#p1{
+    text-align: left;
+}
+
+#p2{
+    text-align: left;
+}
+
+#p3{
+    text-align: left;
+}
+
+.imagem{
+    margin: 10px;
+    display: flex; /* para que a imagem fosse flexivel dentro do seu container */
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.imagem img{
+width:30vw;
+}
+
+
+.texto{ /*  */
+    flex-direction: column;
+    margin:10px;
+    display: flex;
+    width: 40%;
+    padding: 20px;
+    max-height: 400px; /* par se adaptar */
+}
+.texto p{
+overflow: hidden; /* definir como o texto vai se adaptar de acordo com  tela */
+text-align: justify;
+font-size: 2vw;
+}
+
+.contato{
+    justify-content: center; /* se alinhar */
+    align-items: center; /* alinhamento  */
+    flex-direction: row; /* ficar em linha */
+    flex-wrap: wrap; /* quebra de linha */
+    margin: 10px;
+    display: flex; /* para ser flexivel */
+    width: 18%; /* aumentar o tamanho da lateral*/
+    height: 170px; /* aumentar a altura */
+}
+.contato img{ /* icones aumentar */
+max-width: 55px;
+margin: 10px; /* espaçamento em volta */
+}
+/* fazer com que os icones se mexam ao clicar */
+.contato img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+    /* responsivo */
+
+@media screen and (max-width:915px) {
+    nav{
+        margin-right: 50px;
+    }
+    
+    .contato{ 
+        margin: 0px; /* juntar os itens */
+        flex-direction: row; /*  */
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contato img{ 
+        max-width: 65px;
+        margin: 15px; 
+        }
+
+    .texto{
+        padding: 10px;
+        margin: 0px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .texto p{
+        font-size: 3vw;
+        /* background-color: #36e136; */
+    }
+
+    .imagem{
+        margin: 0px;
+        width: 50%; 
+    }
+
+    .ong{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+    }
+
+    .sobre h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:790px){
+    nav{
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    nav{
+        margin-right: 80px;
+    }
+
+    .contato img{ 
+        max-width: 55px;
+        margin: 10px; 
+        }
+
+    .texto p{
+        font-size: 3vw;
+        /* background-color: aqua; */
+    }
+
+    .sobre{
+    padding: 10px;
+    height: 350px;
+    font-size: 4vw;
+    }
+}
+/* colocar para */
+@media screen and (max-width:450px){
+    
+    nav{
+        margin-right: 105px;
+    }
+
+    .contato img{ 
+        max-width: 47px;
+        margin: 8px; 
+        }
+
+    .texto p{
+        font-size: 4.9vw;
+        /* background-color: blueviolet; */
+    }
+
+    .sobre{
+        padding: 25px;
+        height: 350px;
+        font-size: 16px;
+        border-top: 10px;
+        flex-direction: column;
+    }
+
+    .textosobre h3{
+        font-size: 5vw;
+    }
+    
+    .textosobre h1{
+        margin-right: 10px;
+        padding-top: 20px;
+    }
+
+    .botao{
+        display: none;
+    }
+
+    nav .menu #imgmenu{
+        margin-left: 80px;
+    }
+
+    .imagemsobre img{
+        display: none;
+    }
+
+}
+@media screen and (max-width:350px){
+    .contato img{ 
+        max-width: 44px;
+        margin: 6px; 
+}
+
+    .texto p{
+        font-size: 4.5vw;
+        /* background-color: brown; */
+}
+
+    .imagemsobre img{
+        display: none;
+}
+}
+
+@media screen and (max-width:320px){
+    .contato img{ 
+        max-width: 14vw;
+        margin: 2vw; 
+    }
+
+    .texto p{
+        font-size: 5vw;
+        padding-top: 10px;
+    }
+
+    .texto h2{
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .sobre{
+        padding: 15px;
+        height: 350px;
+        font-size: 16px;
+        border-top: 10px;
+        flex-direction: column;
+        }
+
+    .textosobre h3{
+        font-size: 5vw;
+    }
+
+    .textosobre h1{
+        margin-right: 10px;
+        padding-top: 10px;
+    }
+
+    .texto{
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+        padding-bottom: 2px;
+            
+    }
+
+    .ong{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        padding: 0px;
+    }
+
+    .imagem img {
+        width: 30vw;
+        padding-top: 5px;
+    }
+
+    .imagemsobre img{
+        display: none;
+    }
+    
+}
+
